@@ -2,6 +2,7 @@ const choices = ["Rock", "Paper", "Scissors"]
 let humanScore = 0
 let computerScore = 0
 
+
 function getComputerChoice() {
     const number = Math.floor(Math.random() * 3);
     const computerChoice = choices[number];
@@ -46,7 +47,15 @@ function playRound(humanChoice, computerChoice) {
     }
 };
 
-playRound(getHumanChoice(), getComputerChoice());
+function playGame() {
+
+    for (let i =0; i < 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+
+}
+
+playGame();
 
 
 //remember to delete console.logs, clean code rules (func names, var names etc)
